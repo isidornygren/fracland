@@ -1,4 +1,4 @@
-package com.julia_island;
+package com.fracland;
 
 public class Coordinate {
     public double x, y;

@@ -1,13 +1,15 @@
-package com.julia_island;
+package com.fracland;
 
-import com.julia_island.fractal.Julia;
-import com.julia_island.fractal.Mandelbrot;
+import com.fracland.fractal.Julia;
+import com.fracland.fractal.Mandelbrot;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Island {
     private Matrix matrix;
+    private double EDGE_BLEED = 0.99; // how much relative area to cover away from the edge of the mandelbrot to generate the julia sets
+
     /**
      * Generate a new island with the fractal island generator
      * @param width int width of the map of the island
@@ -19,7 +21,7 @@ public class Island {
         if(n == 0)
             throw new IllegalArgumentException("n needs to be higher than 0");
         Mandelbrot mandel = new Mandelbrot(width, height);
-        ArrayList<Coordinate> edges = mandel.getEdgeArray(Math.max(height, width)*9/10);
+        ArrayList<Coordinate> edges = mandel.getEdgeArray(Math.max(height, width)*EDGE_BLEED);
 
         // Get a random edge point on the mandelbrot set
         Coordinate coordinate = edges.get(ThreadLocalRandom.current().nextInt(0,edges.size()));

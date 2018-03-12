@@ -1,6 +1,7 @@
-package com.julia_island.fractal;
+package com.fracland.fractal;
 
-import com.julia_island.Coordinate;
+import com.fracland.Coordinate;
+import com.fracland.Matrix;
 
 import java.util.ArrayList;
 
@@ -30,7 +31,7 @@ public class Mandelbrot extends fractal {
         // only keep a value above a specific value
         for(int y = 0; y < this.height; y++){
             for(int x = 0; x < this.width; x++){
-                if(set[x][y] > value && set[x][y] < fractal.MAX_ITERATION){
+                if(matrix.get(x,y) > value && matrix.get(x,y) < fractal.MAX_ITERATION){
                     edgeArray.add(new Coordinate((double)x/(double)width*3.5 - 2.5, (double)y/(double)height*2 - 1));
                 }
             }
@@ -42,13 +43,13 @@ public class Mandelbrot extends fractal {
         this.width = width;
         this.height = height;
 
-        set = new int[width][height];
+        matrix = new Matrix(width, height);
         for(int y = 0; y < height; y++){
             for(int x = 0; x < width; x++){
                 // Normalise coordinates
                 double real = (double)x/(double)width*3.5 - 2.5;
                 double imaginary = (double)y/(double)height*2 - 1;
-                set[x][y] = generatePoint(real, imaginary);
+                matrix.insert(x, y, generatePoint(real, imaginary));
             }
         }
     }

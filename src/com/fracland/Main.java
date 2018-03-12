@@ -1,10 +1,8 @@
-package com.julia_island;
+package com.fracland;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
 
@@ -12,7 +10,7 @@ public class Main {
         int width = 1000, height = 1000;
         // Generate image
         BufferedImage image = new BufferedImage(width,height, BufferedImage.TYPE_INT_ARGB);
-        Island island = new Island(width, height, 10, 255);
+        Island island = new Island(width, height, 50, 255);
         Matrix matrix = island.getMatrix();
 
         for(int y = 0; y < height; y++) {

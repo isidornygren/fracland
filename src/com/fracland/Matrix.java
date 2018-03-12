@@ -1,4 +1,4 @@
-package com.julia_island;
+package com.fracland;
 
 public class Matrix {
     private int[][] set;
@@ -55,7 +55,8 @@ public class Matrix {
     public void normalise(int value){
         for(int y = 0; y < height; y++){
             for(int x = 0; x < width; x++){
-                set[x][y] = (int)((double)set[x][y]/(double)max*value);
+                int newValue = (int)(((double)get(x,y)/(double)max)*value);
+                set[x][y] = newValue;
             }
         }
         max = value;
