@@ -13,11 +13,11 @@ public class Main {
         // Generate image
         BufferedImage image = new BufferedImage(width,height, BufferedImage.TYPE_INT_ARGB);
         Island island = new Island(width, height, 10, 255);
-        int[][] set = island.getSet();
+        Matrix matrix = island.getMatrix();
 
         for(int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                int value = set[x][y];
+                int value = matrix.get(x,y);
                 Color color = new Color(value, value, value);
                 image.setRGB(x, y, color.getRGB());
             }

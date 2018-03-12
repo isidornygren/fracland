@@ -1,10 +1,13 @@
 package com.julia_island;
 
+import com.julia_island.fractal.Julia;
+import com.julia_island.fractal.Mandelbrot;
+
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Island {
-    private int set[][];
+    private Matrix matrix;
     /**
      * Generate a new island with the fractal island generator
      * @param width int width of the map of the island
@@ -23,21 +26,21 @@ public class Island {
 
         // Generate the first julia set
         Julia julia = new Julia(width, height, coordinate.x, coordinate.y);
-        julia.normalise(maxHeight);
+        julia.matrix.normalise(maxHeight);
 
         // Values between 5 and 10 seem to generate the best looking islands
         for(int i = 0; i < (n - 1); i++){
             Coordinate coordinateB = edges.get(ThreadLocalRandom.current().nextInt(0,edges.size()));
 
             Julia juliaB = new Julia(width, height, coordinateB.x, coordinateB.y);
-            juliaB.normalise(maxHeight);
-            julia.add(juliaB);
+            juliaB.matrix.normalise(maxHeight);
+            julia.matrix.add(juliaB.matrix);
         }
-        julia.normalise(maxHeight);
+        julia.matrix.normalise(maxHeight);
 
-        set = julia.getSet();
+        matrix = julia.matrix;
     }
-    public int[][] getSet(){
-        return set;
+    public Matrix getMatrix(){
+        return matrix;
     }
 }

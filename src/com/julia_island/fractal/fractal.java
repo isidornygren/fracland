@@ -1,7 +1,10 @@
-package com.julia_island;
+package com.julia_island.fractal;
+
+import com.julia_island.Matrix;
 
 public class fractal {
     protected int[][] set;
+    public Matrix matrix;
     protected int width, height;
     public static int MAX_ITERATION = 1000;
 

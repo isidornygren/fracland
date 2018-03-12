@@ -1,4 +1,6 @@
-package com.julia_island;
+package com.julia_island.fractal;
+
+import com.julia_island.Coordinate;
 
 import java.util.ArrayList;
 
