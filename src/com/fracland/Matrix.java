@@ -32,6 +32,18 @@ public class Matrix {
             }
         }
     }
+    public void add(Matrix b, int dx, int dy){
+        if      (dx < 0 || (b.width  + dx) > width ||
+                 dy < 0 || (b.height + dy) > height)
+            throw new IllegalArgumentException("Tried inserting a matrix outside of another matrix: " +
+                    dx + "," + dy + "," + (b.width + dx) + "," + (b.height + dy));
+        for(int y = 0; y < b.height; y++){
+            for(int x = 0; x < b.width; x++){
+                int value = get(x + dx, y + dy) + b.get(x,y);
+                insert(x + dx, y + dy, value);
+            }
+        }
+    }
     public void addMax(Matrix b){
         if(b.width != width || b.height != height)
             throw new IllegalArgumentException();
@@ -60,5 +72,15 @@ public class Matrix {
             }
         }
         max = value;
+    }
+    public String toString(){
+        String ret = "";
+        for(int y = 0; y < height; y++){
+            for(int x = 0; x < width; x++){
+                ret += get(x,y) + " ";
+            }
+            ret += "\n";
+        }
+        return ret;
     }
 }

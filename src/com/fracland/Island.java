@@ -8,7 +8,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Island {
     private Matrix matrix;
-    private double EDGE_BLEED = 0.99; // how much relative area to cover away from the edge of the mandelbrot to generate the julia sets
+    private double EDGE_BLEED = 0.75; // how much relative area to cover away from the edge of the mandelbrot to generate the julia sets
+    public int width, height;
 
     /**
      * Generate a new island with the fractal island generator
@@ -21,6 +22,9 @@ public class Island {
         if(n == 0)
             throw new IllegalArgumentException("n needs to be higher than 0");
         Mandelbrot mandel = new Mandelbrot(width, height);
+        this.width = width;
+        this.height = height;
+
         ArrayList<Coordinate> edges = mandel.getEdgeArray(Math.max(height, width)*EDGE_BLEED);
 
         // Get a random edge point on the mandelbrot set
