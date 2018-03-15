@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Generate image
-        IslandMass islands = new IslandMass(10, 20, 100);
+        IslandMass islands = new IslandMass(10, 100, 500);
         Matrix matrix = islands.matrix;
         matrix.normalise(255);
         BufferedImage image = new BufferedImage(islands.width,islands.height, BufferedImage.TYPE_INT_ARGB);
@@ -31,13 +31,22 @@ public class Main {
             int screenshots = (int)Files.list(Paths.get("screenshots/")).count();
             String name = "./screenshots/screenshot-" + screenshots + ".png";
             File output = new File(name);
-            ImageIO.write(image, "png", output);
+            ImageIO.write(resizeImage(image, BufferedImage.TYPE_INT_ARGB, (int)(((double)image.getWidth()/(double)image.getHeight())*512), 512), "png", output);
             System.out.println("Saved screenshot as " + name + " successfully.");
         }catch(IOException e){
             e.printStackTrace();
         }catch(NullPointerException e){
             e.printStackTrace();
         }
+    }
+
+    private static BufferedImage resizeImage(BufferedImage originalImage, int type, int IMG_WIDTH, int IMG_HEIGHT) {
+        BufferedImage resizedImage = new BufferedImage(IMG_WIDTH, IMG_HEIGHT, type);
+        Graphics2D g = resizedImage.createGraphics();
+        g.drawImage(originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
+        g.dispose();
+
+        return resizedImage;
     }
 
 }
