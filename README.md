@@ -19,6 +19,7 @@ Fracland is a very simple concept following an unnessecary long number of steps:
 ![screenshot of island 3](screenshots/screenshot-2.png)
 ![screenshot of island 4](screenshots/screenshot-3.png)
 ![screenshot of island 5](screenshots/screenshot-4.png)
+![screenshot of island 6](screenshots/screenshot-5.png)
 
 ## TODO
 * Rotation of island matrix

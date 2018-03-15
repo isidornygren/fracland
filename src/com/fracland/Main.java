@@ -31,7 +31,7 @@ public class Main {
             int screenshots = (int)Files.list(Paths.get("screenshots/")).count();
             String name = "./screenshots/screenshot-" + screenshots + ".png";
             File output = new File(name);
-            ImageIO.write(resizeImage(image, BufferedImage.TYPE_INT_ARGB, (int)(((double)image.getWidth()/(double)image.getHeight())*512), 512), "png", output);
+            ImageIO.write(resizeImage(image, BufferedImage.TYPE_INT_ARGB, (int)(((double)image.getWidth()/(double)image.getHeight())*256), 256), "png", output);
             System.out.println("Saved screenshot as " + name + " successfully.");
         }catch(IOException e){
             e.printStackTrace();
