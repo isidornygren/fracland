@@ -23,7 +23,7 @@ public class IslandMass {
         for(int i = 0; i < n ; i++){
             int width = Math.abs((int)random.nextGaussian()*sizeDeviation + sizeMean);
             int height = Math.abs((int)random.nextGaussian()*sizeDeviation + sizeMean);
-            islands[i] = new Island(width, height, 8, 255);
+            islands[i] = new Island(width, height, 16, 255);
         }
         // Calculate starting angle of line
         double angle = random.nextDouble()*2*Math.PI;

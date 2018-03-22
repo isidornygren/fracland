@@ -14,7 +14,7 @@ public class Matrix {
         if(x > width || y > height)
             throw new IllegalArgumentException("parameter out of bounds");
         set[x][y] = value;
-        max = Math.max(max, value);
+        max = Math.max(max, Math.abs(value));
     }
     public int get(int x, int y){
         if(x > width || y > height)

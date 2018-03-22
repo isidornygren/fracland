@@ -11,27 +11,13 @@ import java.nio.file.Paths;
 
 public class Main {
 
-    public static void main(String[] args) {
-        // Generate image
-        IslandMass islands = new IslandMass(10, 100, 500);
-        Matrix matrix = islands.matrix;
-        matrix.normalise(255);
-        BufferedImage image = new BufferedImage(islands.width,islands.height, BufferedImage.TYPE_INT_ARGB);
-
-        for(int y = 0; y < islands.height; y++) {
-            for (int x = 0; x < islands.width; x++) {
-                int value = matrix.get(x,y);
-                Color color = new Color(value, value, value);
-                image.setRGB(x, y, color.getRGB());
-            }
-        }
-        // Save image
+    private static void saveImage(BufferedImage image){
         try{
             // Count already existing screenshots
             int screenshots = (int)Files.list(Paths.get("screenshots/")).count();
             String name = "./screenshots/screenshot-" + screenshots + ".png";
             File output = new File(name);
-            ImageIO.write(resizeImage(image, BufferedImage.TYPE_INT_ARGB, (int)(((double)image.getWidth()/(double)image.getHeight())*256), 256), "png", output);
+            ImageIO.write(image, "png", output);
             System.out.println("Saved screenshot as " + name + " successfully.");
         }catch(IOException e){
             e.printStackTrace();
@@ -40,13 +26,23 @@ public class Main {
         }
     }
 
-    private static BufferedImage resizeImage(BufferedImage originalImage, int type, int IMG_WIDTH, int IMG_HEIGHT) {
-        BufferedImage resizedImage = new BufferedImage(IMG_WIDTH, IMG_HEIGHT, type);
-        Graphics2D g = resizedImage.createGraphics();
-        g.drawImage(originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
-        g.dispose();
+    public static void main(String[] args) {
+        // Generate image
+        IslandMass islands = new IslandMass(10, 128, 512);
+        Matrix matrix = islands.matrix;
+        BufferedImage image = ImageGenerator.generate(matrix);
 
-        return resizedImage;
+        // Print the image to a display
+        ImageIcon icon=new ImageIcon(image);
+        JFrame frame=new JFrame();
+        frame.setLayout(new FlowLayout());
+        frame.setSize(matrix.width,matrix.height);
+        JLabel lbl=new JLabel();
+        lbl.setIcon(icon);
+        frame.add(lbl);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        saveImage(image);
     }
-
 }
