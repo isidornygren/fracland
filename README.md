@@ -33,5 +33,5 @@ I dunno, sorry
 
 ## TODO
 * Rotation of island matrix
-* Sample program for island view
+* ~~Sample program for island view~~
 * Package-ify

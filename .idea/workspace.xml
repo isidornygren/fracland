@@ -87,8 +87,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="374">
-                <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+              <first_editor relative-caret-position="595">
+                <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -373,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521715654358</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added explanation to why">
+      <created>1521716332064</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1521716332064</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -424,7 +431,8 @@
     <MESSAGE value="Added island image generator to create island images" />
     <MESSAGE value="Added centered image island in readme" />
     <MESSAGE value="Added new island pic in readme and updated to a &quot;retro indie pixel&quot;-look" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new island pic in readme and updated to a &quot;retro indie pixel&quot;-look" />
+    <MESSAGE value="Added explanation to why" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added explanation to why" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -831,8 +839,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="374">
-            <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <first_editor relative-caret-position="595">
+            <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
             <folding />
           </first_editor>
           <second_editor />
