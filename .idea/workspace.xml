@@ -4,8 +4,6 @@
     <list default="true" id="bba63724-2ec6-4c33-a078-424f138bc7a3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fracland/ImageGenerator.java" afterPath="$PROJECT_DIR$/src/com/fracland/ImageGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fracland/Main.java" afterPath="$PROJECT_DIR$/src/com/fracland/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,6 +24,23 @@
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fracland.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fracland.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="island.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/island.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -72,8 +87,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="85">
-                <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <first_editor relative-caret-position="374">
+                <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -351,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521712721107</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added new island pic in readme and updated to a &quot;retro indie pixel&quot;-look">
+      <created>1521715654358</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1521715654358</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -401,7 +423,8 @@
     <MESSAGE value="Updated screenshots and added image scaling because why not" />
     <MESSAGE value="Added island image generator to create island images" />
     <MESSAGE value="Added centered image island in readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added centered image island in readme" />
+    <MESSAGE value="Added new island pic in readme and updated to a &quot;retro indie pixel&quot;-look" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new island pic in readme and updated to a &quot;retro indie pixel&quot;-look" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -414,16 +437,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/screenshots/screenshot-4.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshots/screenshot-3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screenshots/screenshot-2.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -802,11 +815,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fracland.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/island.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <first_editor relative-caret-position="374">
+            <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
             <folding />
           </first_editor>
           <second_editor />
