@@ -17,7 +17,7 @@ Fracland is a very simple concept following an unnessecary long number of steps:
 6. You've now generated some *special* islands.
 
 ## Why
-Because perlin noise if overrated? 
+Because perlin noise is overrated? 
 Because during the time it takes to generate these islands you could have generated a million more with a noise function?
 Why not?
 I dunno, sorry

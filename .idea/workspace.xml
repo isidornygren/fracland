@@ -87,8 +87,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="595">
-                <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+              <first_editor relative-caret-position="323">
+                <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -380,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521716332064</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Scratched a todo">
+      <created>1521716402572</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1521716402572</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -432,7 +439,8 @@
     <MESSAGE value="Added centered image island in readme" />
     <MESSAGE value="Added new island pic in readme and updated to a &quot;retro indie pixel&quot;-look" />
     <MESSAGE value="Added explanation to why" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added explanation to why" />
+    <MESSAGE value="Scratched a todo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scratched a todo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -839,8 +847,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="595">
-            <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <first_editor relative-caret-position="323">
+            <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
             <folding />
           </first_editor>
           <second_editor />
