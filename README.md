@@ -3,7 +3,7 @@ Fracland is a fractal generator that uses points on the edge of the mandelbrot s
 and adds these together to generate a heightmap for an island.
 
 <p align="center">
-  <img src="screenshots/screenshot-10.png"/>
+  <img src="island.png"/>
 </p>
 
 ## How does it work?

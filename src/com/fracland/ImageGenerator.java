@@ -63,17 +63,35 @@ public class ImageGenerator {
                 int value = matrix.get(x,y);
                 Color color;
                 double vert = ((double)shadows.get(x, y) + 100.0)/200.0; // 0 = shadow 1 = lit
-                if(value < 50){ // Water
-                    color = new Color(value,value + 75,200);
+                if(value < 50) { // Water
+                    color = new Color(56 + value, 103 + value, 175 + value / 2);
+                }else if (value < 65 && getSteepness(matrix, x, y) < 25){  // Sand
+                    //color = new Color((int)(242*vert), (int)(223*vert), (int)(152*vert));
+                    color = new Color(242, 223, 152);
                 }else if(value < 150){  // Ground
-                    value = (int)(value*vert);  // Add shadows
-                    if(getSteepness(matrix, x, y) > 150){
-                        color = new Color(value, value, value);
-                    }else
-                        color = new Color(value/2, value, value/2);
+                    if(getSteepness(matrix, x, y) > 50){
+                        color = new Color(102, 136, 59);
+                    }else if(value < 90){
+                        if(vert < 0.5) {  // Grassland shadow
+                            color = new Color(122, 166, 71);
+                        }else {
+                            color = new Color(183, 183, 71);
+                        }
+                    }
+                    else{
+                        if(vert < 0.5) {  // Grassland shadow
+                            color =  new Color(67, 140, 114);
+                        }else{
+                            color = new Color(122, 166, 71);
+                        }
+                    }
                 }else{  // mountain
-                    value = (int)(value*vert); // Add shadows
-                    color = new Color(value, value, value);
+                    if(vert < 0.3) {
+                        color = new Color(63, 73, 75); // dark mountain shadow
+                    }else if(vert < 0.5){
+                        color = new Color(74, 89, 100); // mountain shadow
+                    }else
+                        color = new Color(181, 112, 72);
                 }
                 image.setRGB(x, y, color.getRGB());
             }
