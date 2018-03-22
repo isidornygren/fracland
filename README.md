@@ -2,6 +2,10 @@
 Fracland is a fractal generator that uses points on the edge of the mandelbrot set to render different julia sets,
 and adds these together to generate a heightmap for an island.
 
+<p align="center">
+  <img src="screenshots/screenshot-10.png"/>
+</p>
+
 ## How does it work?
 
 Fracland is a very simple concept following an unnessecary long number of steps:
