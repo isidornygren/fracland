@@ -28,7 +28,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Generate image
-        IslandMass islands = new IslandMass(10, 64, 256);
+        IslandMass islands = new IslandMass(10, 128, 512);
         Matrix matrix = islands.matrix;
         BufferedImage image = ImageGenerator.generate(matrix);
 
